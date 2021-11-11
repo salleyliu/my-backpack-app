@@ -36,5 +36,10 @@
     "react-dom": "^16.14.0",
     "react-native": "^0.66.2",
     "webpack-bundle-analyzer": "^4.5.0"
+  },
+  "backpack-react-scripts": {
+    "externals": {
+      "jquery": "jQuery"
+    }
   }
 }
