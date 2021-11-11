@@ -5,7 +5,7 @@ import BpkButton from 'bpk-component-button'
 import BpkText from 'bpk-component-text'
 import STYLES from './App.scss'
 
-// import('./diff/a');
+import('./diff/a')
 
 // import $ from 'jquery';
 
