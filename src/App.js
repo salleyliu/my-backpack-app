@@ -7,9 +7,10 @@ import STYLES from './App.scss'
 
 // import('./diff/a');
 
-// import $ from 'jquery';
+// here we import jquery, the package does not contain jquery use externals
+import $ from 'jquery'
 
-// $('.my-element').animate(/* ... */);
+$('.my-element').animate(/* ... */)
 
 const c = className => STYLES[className] || 'UNKNOWN'
 
