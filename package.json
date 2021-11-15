@@ -87,7 +87,11 @@
     "react-native": "^0.66.2",
     "webpack-bundle-analyzer": "^4.5.0"
   },
-  "backpack-react-scripts": {},
+  "backpack-react-scripts": {
+    "externals": {
+      "jquery": "jQuery"
+    }
+  },
   "jest": {
     "roots": [
       "<rootDir>/src"
