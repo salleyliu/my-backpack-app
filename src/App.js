@@ -7,6 +7,8 @@ import STYLES from './App.scss'
 
 import('./diff/a')
 
+import('./diff/b')
+
 // import $ from 'jquery';
 
 // $('.my-element').animate(/* ... */);
