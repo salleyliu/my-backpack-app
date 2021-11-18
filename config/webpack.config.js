@@ -336,23 +336,24 @@ module.exports = function (webpackEnv) {
             cacheGroups: bpkReactScriptsConfig.vendorsChunkRegex
               ? {
                   vendors: {
-                    test: new RegExp(bpkReactScriptsConfig.vendorsChunkRegex)
+                    test: new RegExp(bpkReactScriptsConfig.vendorsChunkRegex),
+                    name: 'vender1'
                   }
                 }
               : {}
           }
-        : {},
+        : {}
       // Keep the runtime chunk separated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
       // https://github.com/facebook/create-react-app/issues/5358
       // runtimeChunk: {
       //   name: entrypoint => `runtime-${entrypoint.name}`,
       // },
-      runtimeChunk: bpkReactScriptsConfig.enableAutomaticChunking
-        ? {
-            name: entrypoint => `runtime-${entrypoint.name}`
-          }
-        : false
+      // runtimeChunk: bpkReactScriptsConfig.enableAutomaticChunking
+      //   ? {
+      //       name: entrypoint => `runtime-${entrypoint.name}`
+      //     }
+      //   : false
     },
     externals: isEnvProduction ? bpkReactScriptsConfig.externals || {} : {},
     resolve: {
@@ -843,16 +844,16 @@ module.exports = function (webpackEnv) {
           formatter: isEnvProduction ? typescriptFormatter : undefined
         }),
       new BundleAnalyzerPlugin({
-        // analyzerMode: 'server',
-        // analyzerHost: '127.0.0.1',
-        // analyzerPort: 8889,
-        // reportFilename: 'report.html',
-        // defaultSizes: 'parsed',
-        // openAnalyzer: true,
-        // generateStatsFile: false,
-        // statsFilename: 'stats.json',
-        // statsOptions: null,
-        // logLevel: 'info'
+        analyzerMode: 'server',
+        analyzerHost: '127.0.0.1',
+        analyzerPort: 8889,
+        reportFilename: 'report.html',
+        defaultSizes: 'parsed',
+        openAnalyzer: true,
+        generateStatsFile: false,
+        statsFilename: 'stats.json',
+        statsOptions: null,
+        logLevel: 'info'
       })
       // For now we keep this disabled but in a future update we should review if just setting disableESLintPlugin works
       // but needs research into the dependencies being installed if they clash with the Skyscanner config
