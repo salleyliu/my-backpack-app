@@ -6,9 +6,9 @@ import BpkText from 'bpk-component-text'
 import STYLES from './App.scss'
 import('jquery')
 
-import('./diff/a')
+import('./component/a')
 
-import('./diff/b')
+import('./component/b')
 
 // import $ from 'jquery';
 
