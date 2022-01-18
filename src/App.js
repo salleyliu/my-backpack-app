@@ -4,8 +4,11 @@ import { BpkCode } from 'bpk-component-code'
 import BpkButton from 'bpk-component-button'
 import BpkText from 'bpk-component-text'
 import STYLES from './App.scss'
+import('jquery')
 
-// import('./diff/a');
+import('./component/a')
+
+import('./component/b')
 
 // import $ from 'jquery';
 
